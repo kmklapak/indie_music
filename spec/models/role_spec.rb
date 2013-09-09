@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe User do
 
-  before { @role = User.new(name: "Admin")}
+  before { @role = Role.new(name: "Admin")}
 
   subject { @role }
 
