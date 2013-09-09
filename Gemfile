@@ -8,11 +8,10 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
-gem 'sqlite3'
-gem 'foreigner'
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
+  gem 'sqlite3'
   # The following optional lines are part of the advanced setup.
   gem 'guard-rspec', '2.5.0'
   gem 'spork-rails', github: 'sporkrb/spork-rails'
@@ -26,7 +25,7 @@ group :test do
   gem 'factory_girl_rails', '4.2.0'
   gem 'cucumber-rails', '1.3.0', :require => false
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
-
+  gem 'sqlite3'
   # Uncomment these lines on Linux.
    gem 'libnotify', '0.8.0'
    gem 'therubyracer'

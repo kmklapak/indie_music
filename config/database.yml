@@ -9,9 +9,3 @@ test:
   database: db/indiemusic-test.sqlite3
   pool: 5
   timeout: 5000
-
-production:
-  adapter: sqlite3
-  database: db/indiemusic-prod.sqlite3
-  pool: 5
-  timeout: 5000
