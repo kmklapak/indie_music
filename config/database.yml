@@ -1,15 +1,17 @@
 development:
-  adapter: postgresql
-  encoding: unicode
-  database: indiemusic-dev
+  adapter: sqlite3
+  database: db/indiemusic-dev.sqlite3
   pool: 5
-  username: kmklapak
-  password:
+  timeout: 5000
 
 test:
-  adapter: postgresql
-  encoding: unicode
-  database: indiemusic-test
+  adapter: sqlite3
+  database: db/indiemusic-test.sqlite3
   pool: 5
-  username: kmklapak
-  password: 
+  timeout: 5000
+
+production:
+  adapter: sqlite3
+  database: db/indiemusic-prod.sqlite3
+  pool: 5
+  timeout: 5000
