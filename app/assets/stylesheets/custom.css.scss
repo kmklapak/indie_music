@@ -24,7 +24,6 @@
 .btn-primary {
 	color: white;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-	background-color: black;
 	background-image: -moz-linear-gradient(top, #a90329, #6d0019);
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#a90329), to(#6d0019));
 	background-image: -webkit-linear-gradient(top, #a90329, #6d0019);
@@ -47,12 +46,17 @@
 	color: white;
 }
 
-.hero-unit {
+#home-content {
 	background: -webkit-linear-gradient(rgba(255, 245, 253, 0.75),rgba(255, 245, 253, 0.75)),url('http://openphoto.net/volumes/sizes/mike/5221/2.jpg');
 	background: -moz-linear-gradient(rgba(255, 245, 253, 0.75),rgba(255, 245, 253, 0.75)),url('http://openphoto.net/volumes/sizes/mike/5221/2.jpg');
 	background: linear-gradient(rgba(255, 245, 253, 0.75),rgba(255, 245, 253, 0.75)), url('http://openphoto.net/volumes/sizes/mike/5221/2.jpg');
 	background-repeat: no-repeat;
-	background-size:100%;
+	background-size:100% 900px;
+  height:700px;
+}
+
+.move-btn{
+  margin-top:50px;
 }
 
 a {
@@ -71,6 +75,7 @@ a {
   	}
 }
 
+/*layout*/
 
 
 html {
@@ -78,7 +83,6 @@ html {
 }
 
 body {
-  padding-top: 60px;
 }
 
 section {
@@ -96,6 +100,43 @@ textarea {
 .center h1 {
   margin-bottom: 10px;
 }
+
+.sidebar{    
+  width: 100px;
+  height:1000px;
+  float: left;
+  display: inline;
+  padding: 0;
+  position:fixed;
+  margin-top:-20px;
+  background: #6d0019; /* Old browsers */
+  background: -moz-linear-gradient(top, #6d0019 0%, #8f0222 44%, #a90329 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6d0019), color-stop(44%,#8f0222), color-stop(100%,#a90329)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #6d0019 0%,#8f0222 44%,#a90329 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #6d0019 0%,#8f0222 44%,#a90329 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #6d0019 0%,#8f0222 44%,#a90329 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #6d0019 0%,#8f0222 44%,#a90329 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d0019', endColorstr='#a90329',GradientType=0 ); /* IE6-9 */
+  border:none;
+  z-index:9999;
+}
+
+.container{
+    width: 90%;
+    display: block;
+}
+
+.navbar-inner .container{
+    width:95% !important;
+    margin-left:20px !important;
+    min-width:700px;
+    border:none;
+}
+
+#content{
+  margin-left: 100px;
+  margin-top:60px;
+ }
 
 /* typography */
 
@@ -145,9 +186,11 @@ p {
 
 footer {
   margin-top: 45px;
+  margin-left:45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #999;
+     width:95% !important;
 }
 
 footer a {
