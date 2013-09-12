@@ -1,3 +1,19 @@
 <div class='sidebar' >
-  <a href="link.com">link</a>
+  <center>
+   <% if !user_signed_in? %>
+      <li>
+         <%= link_to "Home",    root_path %>
+      </li>
+   <% else %>
+      <li>
+         <%= link_to "My profile",   profile_path%>
+      </li>
+   	  <li>
+         <%= link_to "Home",    home_path %>
+      </li>
+       <ul>
+         <%= link_to "Search", '#' %>
+      </ul>
+   <% end %>
+  </center>
 </div>
