@@ -10,12 +10,14 @@
 <body> 	
     <%= render 'layouts/header' %>
 	<div class="container-fluid" >
-  		<div class="row-fluid" style="margin-top:60px;">
+  		<div class="row-fluid" style="margin-top:60px; min-width:1400px">
     		<div class="span2">
       			<%= render 'layouts/sidebar' %>
     		</div>
     		<div class="span10">
+    			<div style="min-width:920px">
        			<%= yield %>
+       			</div>
     		</div>
   		</div>
 	</div>

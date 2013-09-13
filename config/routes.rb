@@ -1,8 +1,9 @@
 IndieMusic::Application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => :registrations }
+
 
   root  'static_pages#signup'
-  match '/profile', to:'users#profile',   		via: 'get'
+  match '/profile/:id', to:'users#profile',   		via: 'get' , :as => 'profile'
   match '/signup',  to: 'users#new',   		 	via: 'get'
   match '/home',  	to:'static_pages#home',   		via: 'get'
   match '/help',    to: 'static_pages#help',    via: 'get'

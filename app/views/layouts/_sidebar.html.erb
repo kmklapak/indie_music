@@ -6,14 +6,16 @@
       </li>
    <% else %>
       <li>
-         <%= link_to "My profile",   profile_path%>
+         <%= link_to "My profile",   profile_path(current_user) %>
       </li>
    	  <li>
          <%= link_to "Home",    home_path %>
       </li>
+      <% if current_page?(home_path) %>
        <ul>
          <%= link_to "Search", '#' %>
       </ul>
+      <% end %>
    <% end %>
   </center>
 </div>
