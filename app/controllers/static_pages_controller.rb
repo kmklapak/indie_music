@@ -15,11 +15,14 @@ class StaticPagesController < ApplicationController
   end
 
   def popular
+    render :layout => true
   end
 
   def country
+    render :layout => true
   end
 
   def genre
+    render :layout => true
   end
 end

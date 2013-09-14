@@ -3,11 +3,17 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
   def after_sign_in_path_for(resource)
-  	profile_path(current_user)
+    home_path
   end
 
 	def after_update_path_for(resource)
-		profile_path(current_user)
+    if current_user.role_id == 1 
+     fan_path(current_user.role.name,current_user)
+    elsif current_user.role_id == 2
+     artist_path(current_user.role.name,current_user)
+    else
+
+    end 
 	end
 
   def configure_permitted_parameters
