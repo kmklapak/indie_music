@@ -6,8 +6,4 @@
 <p>This is the users info:</p>
 Name: <%=@user.name%> <br>
 Email: <%=@user.email%> <br>
-<%if @user.role_id == 1%>
-Account type: fan <br>
-<%elsif @user.role_id == 2%>
-Account type: artist <br>
-<% end %>
+Account: <%=@user.role.name%>

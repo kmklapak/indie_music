@@ -1,4 +1,4 @@
-<div class='sidebar' >
+<div id="sidebar" >
   <center>
    <% if !user_signed_in? %>
       <li>
@@ -12,8 +12,14 @@
          <%= link_to "Home",    home_path %>
       </li>
       <% if current_page?(home_path) %>
-       <ul>
-         <%= link_to "Search", '#' %>
+       <ul id="search">
+          <li><a href="#">Search</a></li>
+            <ul>
+             <li><%= link_to 'Most Popular', '/artist/popular', remote: true %></li>
+              <li><a id="genre" href="#" >Genre</a></li>
+              <li><%= link_to 'By Country', '/artist/country', remote: true %></li>
+            </ul>
+          </li>
       </ul>
       <% end %>
    <% end %>

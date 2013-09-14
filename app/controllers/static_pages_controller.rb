@@ -13,4 +13,13 @@ class StaticPagesController < ApplicationController
 
   def home
   end
+
+  def popular
+  end
+
+  def country
+  end
+
+  def genre
+  end
 end
