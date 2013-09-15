@@ -1,8 +1,5 @@
 class UsersController < ApplicationController
-  def show
-
-  end
   def profile
-   @user = current_user
+  	@user = User.find_by_id(params[:id])
   end
 end
